@@ -1,0 +1,242 @@
+/* nunito font */
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+/* rest */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f7f7;
+    font-family: 'nunito', sans-serif;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+/* header style =====================================================================*/
+#title{
+    font-family: 'Indie Flower', sans-serif;
+}
+header {
+  width: 100%;
+  height: 70px;
+  background-color: #560764;
+  padding: 10px 0 10px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0px 5px 12px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 12px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 12px -8px rgba(0, 0, 0, 0.75);
+  z-index: 20;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.navbar h1{
+    color: white;
+    font-size: 2rem;
+    flex: 1;
+    text-transform: uppercase;
+}
+
+.navbar .search-box {
+    color: rgb(107, 107, 107);
+    font-size: 1.3rem;
+    flex: 2;
+    outline: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.navbar .search-box:focus {
+    outline: none;
+}
+
+/* main style ===========================================================*/
+.welcom-title{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.welcom-title h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    position: relative;
+    border-radius: 3px;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.2);
+}
+
+.card ul{
+    list-style: none;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* modal style */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.hidden{
+    display: none;
+}
+
+.modal-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #560764;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10px;
+    color: white;
+}
+
+.modal .card ul{
+    margin-top: 25px;
+}
+
+.modal .card{
+    cursor: default;
+    width: 80%;
+}
+.modal .close-btn{
+    cursor: pointer;
+}
+
+/* footer style */
+.footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: 700px){
+    /* navbar */
+    .navbar h1{
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+
+    .navbar .search-box {
+        font-size: 1rem;
+    }
+    /* ==== main style === */
+    .welcom-title h1{
+        font-size: 2rem;
+    }
+    .container{
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+/* =====================  utils =============================================== */
+
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+
+.orange {
+    background-color: rgb(230, 151, 4);
+}
+
+/* loader style */
+.loader-box{
+    height: 100vh;
+    align-items: center;
+    display: none;
+    margin-top: 20px;
+    transform: translate(-50%, -50%);
+}
+.loader {
+  
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #560764; 
+  display: block;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

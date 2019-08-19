@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>searchIT</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 id="title">searchIT</h1>
+            <input type="text" class="search-box" placeholder="City or State">
+        </nav>
+    </header>
+    <div class="welcom-title">
+        <h1>Welcom to searchIT</h1>
+        <h3>Search a City or State</h3>
+    </div>
+    <main class="container">
+        <div class="loader-box">
+            <div class="loader"></div>
+        </div>
+    </main>
+    <div class="modal hidden">
+        
+        <div class="card">
+            <div class="modal-head">
+                <h2>City detail</h2>
+                <span class="close-btn">x</span>
+            </div>
+            <ul>
+                <li class="city">
+                    <h1 class="city">City: </h1>
+                </li>
+                <li class="state">State:</li>
+                <li class="population">Population: </li>
+                <li class="rank">Rank: </li>
+                <li class="growth">Growth: <span class="red"></span></li>
+                <li class="coordinates">Coordinate: </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            andela challenge &copy; 2019
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
